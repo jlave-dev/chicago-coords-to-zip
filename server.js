@@ -10,11 +10,7 @@ app.get("/", (req, res) => {
     return res.status(404).send("lat or long query parameters were missing.");
   }
   const zip = getZipFromCoords(lat, long);
-  if (!zip) {
-    return res.status(404).send();
-  } else {
-    return res.send(zip);
-  }
+  return res.send(zip);
 });
 
 app.listen(PORT, () => {
