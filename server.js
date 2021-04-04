@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   if (!zip) {
     return res.status(404).send();
   } else {
-    return res.send(area);
+    return res.send(zip);
   }
 });
 
