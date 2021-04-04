@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   try {
     const { lat, long } = req.query;
     if (!lat || !long) {
-      return res.status(404).send("lat or long query parameters were missing.");
+      return res.status(400).send("lat or long query parameters were missing.");
     }
     const zip = getZipFromCoords(lat, long);
     return res.send(zip);
