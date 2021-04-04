@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const getAreaFromCoords = require("./get-area-from-coords");
+const getAreaFromCoords = require("./get-zip-from-coords");
 
 const PORT = 3000;
 
